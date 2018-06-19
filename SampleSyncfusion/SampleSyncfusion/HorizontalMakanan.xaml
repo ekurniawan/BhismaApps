@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleSyncfusion.HorizontalMakanan" Title="Daftar Makanan"
+             xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <Grid RowSpacing="0" BackgroundColor="#FFFFFF">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <Grid RowSpacing="0" Grid.Row="1" Padding="0,10,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <!--<StackLayout Orientation="Vertical" Padding="10,0,0,0">
+                        <Label Text="Veg Pizza" FontAttributes="Bold" TextColor="Black">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <OnPlatform.Android>
+                                        <OnIdiom x:TypeArguments="x:Double" Phone="20" Tablet="22" />
+                                    </OnPlatform.Android>
+                                    <OnPlatform.iOS>
+                                        <OnIdiom x:TypeArguments="x:Double" Phone="18" Tablet="20" />
+                                    </OnPlatform.iOS>
+                                </OnPlatform>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>-->
+                    <sync:SfListView  x:Name="lvMakanan" ItemsSource="{Binding CategoryItems}"
+                           Grid.Row="1"
+                           Padding="10,13,10,-5"
+                           SelectionMode="None"
+                           Orientation="Horizontal"
+                           ItemSpacing="5,10,5,10">
+                        <sync:SfListView.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <OnPlatform.Android>
+                                    <OnIdiom x:TypeArguments="x:Double"
+                           Phone="400"
+                           Tablet="220" />
+                                </OnPlatform.Android>
+                                <OnPlatform.iOS>
+                                    <OnIdiom x:TypeArguments="x:Double"
+                           Phone="170"
+                           Tablet="280" />
+                                </OnPlatform.iOS>
+                            </OnPlatform>
+                        </sync:SfListView.HeightRequest>
+                        <sync:SfListView.ItemSize>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <OnPlatform.Android>
+                                    <OnIdiom x:TypeArguments="x:Double" Phone="346" Tablet="180" />
+                                </OnPlatform.Android>
+                                <OnPlatform.iOS>
+                                    <OnIdiom x:TypeArguments="x:Double" Phone="125" Tablet="250" />
+                                </OnPlatform.iOS>
+                            </OnPlatform>
+                        </sync:SfListView.ItemSize>
+                        <sync:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#EEEEEE" Padding="2">
+                                    <Frame.HasShadow>
+                                        <OnPlatform x:TypeArguments="x:Boolean" Android="True" WinPhone="True" iOS="False"/>
+                                    </Frame.HasShadow>
+                                    <Grid RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="48" />
+                                        </Grid.RowDefinitions>
+                                        <Image Source="{Binding CategoryImage}" Aspect="Fill"/>
+                                        <Label Grid.Row="1" Text="{Binding CategoryName}"
+                           LineBreakMode="WordWrap"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           TextColor="Black" Opacity="0.87"
+                           Margin="16,0,0,0" FontSize="22" FontAttributes="Bold">
+                                        </Label>
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </sync:SfListView.ItemTemplate>
+                    </sync:SfListView>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

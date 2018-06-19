@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleSyncfusion.GridViewMakanan"
+             Title="Grid Layout"
+             xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+    <ContentPage.Content>
+        <StackLayout>
+            <sync:SfListView x:Name="lvMakanan" ItemsSource="{Binding CategoryItems}"
+                       Margin="0"
+                       Padding="0,5,0,5"
+                       SelectionMode="None"
+                       BackgroundColor="#F0F0F0"
+                       ItemSpacing="5,5,5,5">
+                <sync:SfListView.LayoutManager>
+                    <sync:GridLayout SpanCount="2" />
+                </sync:SfListView.LayoutManager>
+                <sync:SfListView.ItemSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <OnPlatform.Android>
+                            <OnIdiom x:TypeArguments="x:Double"
+                       Phone="100"
+                       Tablet="100" />
+                        </OnPlatform.Android>
+                        <OnPlatform.iOS>
+                            <OnIdiom x:TypeArguments="x:Double"
+                       Phone="100"
+                       Tablet="90" />
+                        </OnPlatform.iOS>
+                    </OnPlatform>
+                </sync:SfListView.ItemSize>
+                <sync:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid RowSpacing="0" ColumnSpacing="0">
+                            <Image Source="{Binding CategoryImage}"
+                             Aspect="AspectFill"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand" />
+                            <Grid ColumnSpacing="0" RowSpacing="0" Opacity="1" HorizontalOptions="End" Padding="5" VerticalOptions="Start">
+                                <Image
+                     x:Name="selectionImage"
+                     HeightRequest="28"
+                     WidthRequest="28"
+                     VerticalOptions="Start"
+                     HorizontalOptions="End" />
+                            </Grid>
+                            <Grid VerticalOptions="End" ColumnSpacing="0" Opacity="0.75" BackgroundColor="#CDCDCD">
+                                <Grid.HeightRequest>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <OnPlatform.WinPhone>
+                                            <OnIdiom x:TypeArguments="x:Double" Phone="30" Tablet="40" Desktop="40" />
+                                        </OnPlatform.WinPhone>
+                                        <OnPlatform.Android>
+                                            <OnIdiom x:TypeArguments="x:Double" Phone="30" Tablet="40" />
+                                        </OnPlatform.Android>
+                                        <OnPlatform.iOS>
+                                            <OnIdiom x:TypeArguments="x:Double" Phone="30" Tablet="40" />
+                                        </OnPlatform.iOS>
+                                    </OnPlatform>
+                                </Grid.HeightRequest>
+                                <Label Text="{Binding CategoryName}" 
+                                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       Margin="20,0,0,0"
+                       HorizontalTextAlignment="Start">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.Android>
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="14" Tablet="18" />
+                                            </OnPlatform.Android>
+                                            <OnPlatform.iOS>
+                                                <OnIdiom x:TypeArguments="x:Double" Phone="10" Tablet="15" />
+                                            </OnPlatform.iOS>
+                                        </OnPlatform>
+                                    </Label.FontSize>
+                                </Label>
+                            </Grid>
+                        </Grid>
+                    </DataTemplate>
+                </sync:SfListView.ItemTemplate>
+            </sync:SfListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

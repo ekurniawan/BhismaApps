@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleSyncfusion.AddBiodata" Title="Biodata">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Masukan Biodata Responden" FontSize="Medium" FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout>
+                <Entry x:Name="txtNama" Placeholder="masukan nama" />
+                <Entry x:Name="txtUsia" Placeholder="masukan usia" />
+                <Entry x:Name="txtGender" Placeholder="masukan gender" />
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btnDaftar" Text="Daftarkan" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

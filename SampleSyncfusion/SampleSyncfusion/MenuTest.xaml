@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleSyncfusion.MenuTest" Title="Menu Test">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnListMkn" Text="List Makanan" Clicked="Btn_Clicked" />
+            <Button x:Name="btnGridMkn" Text="Grid Makanan" Clicked="Btn_Clicked" />
+            <Button x:Name="btnCarouselMkn" Text="Horisontal Makanan" Clicked="Btn_Clicked" />
+            <Button x:Name="btnListTmp" Text="List Tempat" Clicked="Btn_Clicked" />
+            <Button x:Name="btnGridTmp" Text="Grid Tempat" Clicked="Btn_Clicked" />
+            <Button x:Name="btnCarouselTmp" Text="Horisontal Tempat" Clicked="Btn_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,10 +1,81 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Icons\gambar1.jpg" />
+    <None Remove="Icons\gambar2.jpg" />
+    <None Remove="Icons\gambar3.jpg" />
+    <None Remove="Icons\Makanan\Buah\durian.jpg" />
+    <None Remove="Icons\Makanan\Buah\jambu-biji.jpg" />
+    <None Remove="Icons\Makanan\Buah\jeruk.jpg" />
+    <None Remove="Icons\Makanan\Buah\manggis.jpg" />
+    <None Remove="Icons\Makanan\Buah\pepaya.jpg" />
+    <None Remove="Icons\Makanan\Buah\pisang.jpg" />
+    <None Remove="Icons\Makanan\Buah\rambutan.jpg" />
+    <None Remove="Icons\Makanan\Buah\sawo.jpg" />
+    <None Remove="Icons\Makanan\Buah\semangka.jpg" />
+    <None Remove="Icons\Makanan\HasilLaut\cumi-asam-manis.jpg" />
+    <None Remove="Icons\Makanan\HasilLaut\cumi-goreng-tepung.jpg" />
+    <None Remove="Icons\Makanan\HasilLaut\kepiting-lada-hitam.jpg" />
+    <None Remove="Icons\Makanan\HasilLaut\kerang-rebus.jpg" />
+    <None Remove="Icons\Makanan\HasilLaut\kerang-saus-tiram.jpg" />
+    <None Remove="Icons\Makanan\HasilLaut\nasi-goreng-seafood.jpg" />
+    <None Remove="Icons\Makanan\HasilLaut\tumis-kerang-bumbu-pedas.jpg" />
+    <None Remove="Icons\Makanan\HasilLaut\udang-goreng-mentega.jpg" />
+    <None Remove="Icons\Makanan\HasilLaut\udang-goreng-tepung.jpg" />
+    <None Remove="Icons\Makanan\MakananRingan\bika-ambon.jpg" />
+    <None Remove="Icons\Makanan\MakananRingan\cilok.jpg" />
+    <None Remove="Icons\Makanan\MakananRingan\getuk-goreng.jpg" />
+    <None Remove="Icons\Makanan\MakananRingan\klepon.jpg" />
+    <None Remove="Icons\Makanan\MakananRingan\lapis-legit.jpg" />
+    <None Remove="Icons\Makanan\MakananRingan\lemper.jpg" />
+    <None Remove="Icons\Makanan\MakananRingan\putu-ngungg.jpg" />
+    <None Remove="Icons\Makanan\MakananRingan\putu.jpg" />
+    <None Remove="Icons\Makanan\MakananRingan\risoles.jpg" />
+    <None Remove="Icons\Makanan\MakananRingan\tahu-goreng.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\gambar1.jpg" />
+    <EmbeddedResource Include="Icons\gambar2.jpg" />
+    <EmbeddedResource Include="Icons\gambar3.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\Buah\durian.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\Buah\jambu-biji.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\Buah\jeruk.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\Buah\manggis.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\Buah\pepaya.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\Buah\pisang.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\Buah\rambutan.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\Buah\sawo.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\Buah\semangka.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\HasilLaut\cumi-asam-manis.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\HasilLaut\cumi-goreng-tepung.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\HasilLaut\kepiting-lada-hitam.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\HasilLaut\kerang-rebus.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\HasilLaut\kerang-saus-tiram.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\HasilLaut\nasi-goreng-seafood.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\HasilLaut\tumis-kerang-bumbu-pedas.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\HasilLaut\udang-goreng-mentega.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\HasilLaut\udang-goreng-tepung.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\MakananRingan\bika-ambon.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\MakananRingan\cilok.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\MakananRingan\getuk-goreng.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\MakananRingan\klepon.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\MakananRingan\lapis-legit.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\MakananRingan\lemper.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\MakananRingan\putu-ngungg.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\MakananRingan\putu.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\MakananRingan\risoles.jpg" />
+    <EmbeddedResource Include="Icons\Makanan\MakananRingan\tahu-goreng.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Plugin.NetStandardStorage" Version="1.0.5" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.4.118" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.1.0.32" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
   </ItemGroup>
 
@@ -12,8 +83,44 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
+    <Compile Update="ListViewGridMakanan.xaml.cs">
+      <DependentUpon>ListViewGridMakanan.xaml</DependentUpon>
+    </Compile>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AddBiodata.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CarouselMakanan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DetailPageMakanan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GridViewMakanan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="HorisontalSubMakanan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="HorizontalMakanan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListViewGridMakanan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MenuTest.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SampleListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SubListViewGridMakanan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
