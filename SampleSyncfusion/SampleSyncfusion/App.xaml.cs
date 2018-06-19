@@ -26,6 +26,7 @@ namespace SampleSyncfusion
 
         public App()
         {
+            //main page
             InitializeComponent();
             MainPage = new NavigationPage(new MenuTest());
         }
