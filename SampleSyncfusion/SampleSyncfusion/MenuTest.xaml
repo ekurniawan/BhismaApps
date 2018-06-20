@@ -4,6 +4,7 @@
              x:Class="SampleSyncfusion.MenuTest" Title="Menu Test">
     <ContentPage.Content>
         <StackLayout>
+            <Button x:Name="btnMasukanBiodata" Text="Masukan Biodata" />
             <Button x:Name="btnListMkn" Text="List Makanan" Clicked="Btn_Clicked" />
             <Button x:Name="btnGridMkn" Text="Grid Makanan" Clicked="Btn_Clicked" />
             <Button x:Name="btnCarouselMkn" Text="Horisontal Makanan" Clicked="Btn_Clicked" />

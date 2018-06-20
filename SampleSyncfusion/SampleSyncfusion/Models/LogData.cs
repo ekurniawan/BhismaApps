@@ -9,7 +9,10 @@ namespace SampleSyncfusion.Models
     {
         [PrimaryKey,AutoIncrement]
         public int LogID { get; set; }
-        public string BiodataID { get; set; }
+        public DateTime TanggalPercobaan { get; set; }
+        public string Nama { get; set; }
+        public int Usia { get; set; }
+        public string Gender { get; set; }
         public long WaktuMulai { get; set; }
         public long WaktuSelesai { get; set; }
         public long Interval { get; set; }

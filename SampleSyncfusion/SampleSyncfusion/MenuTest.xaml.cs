@@ -17,6 +17,17 @@ namespace SampleSyncfusion
             InitializeComponent();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Global.Instance.myData.KodeJenisSoal = "";
+            Global.Instance.myData.WaktuMulai = 0;
+            Global.Instance.myData.WaktuSelesai = 0;
+            Global.Instance.myData.Interval = 0;
+            Global.Instance.myData.HistoriJawaban = "";
+            Global.Instance.myData.JawabanAkhir = "";
+        }
+
         private async void Btn_Clicked(object sender, EventArgs e)
         {
             Global.Instance.myData.WaktuMulai = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;

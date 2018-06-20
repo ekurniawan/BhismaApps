@@ -21,22 +21,26 @@ namespace SampleSyncfusion
 
         private async void BtnDaftar_Clicked(object sender, EventArgs e)
         {
-            string bioID = Guid.NewGuid().ToString();
-            var newBiodata = new Biodata
+            //string bioID = Guid.NewGuid().ToString();
+            /*var newBiodata = new Biodata
             {
                 BiodataID = bioID,
                 Nama = txtNama.Text,
                 Usia = Convert.ToInt32(txtUsia.Text),
                 Gender = txtGender.Text
-            };
+            };*/
 
             try
             {
                 //menambahkan biodata kedalam global variable
-                Global.Instance.myBio.BiodataID = bioID;
-                Global.Instance.myBio.Nama = txtNama.Text;
-                Global.Instance.myBio.Usia = Convert.ToInt32(txtUsia.Text);
-                Global.Instance.myBio.Gender = txtGender.Text;
+                //Global.Instance.myBio.BiodataID = bioID;
+                //Global.Instance.myBio.Nama = txtNama.Text;
+                //Global.Instance.myBio.Usia = Convert.ToInt32(txtUsia.Text);
+                //Global.Instance.myBio.Gender = txtGender.Text;
+
+                Global.Instance.myData.Nama = txtNama.Text;
+                Global.Instance.myData.Gender = txtGender.Text;
+                Global.Instance.myData.Usia = Convert.ToInt32(txtUsia.Text);
 
                 //menambahkan biodata kedalam sqlite
                 //App.DBUtils.InsertBiodata(newBiodata);

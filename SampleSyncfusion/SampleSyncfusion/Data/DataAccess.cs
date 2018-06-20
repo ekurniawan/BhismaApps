@@ -32,7 +32,7 @@ namespace SampleSyncfusion.Data
 
         #region Table Biodata
 
-        public int TambahBiodata(Biodata biodata)
+        /*public int TambahBiodata(Biodata biodata)
         {
             return database.Insert(biodata);
         }
@@ -55,7 +55,7 @@ namespace SampleSyncfusion.Data
         public int DeleteBiodata(Biodata biodata)
         {
             return database.Delete(biodata);
-        }
+        }*/
 
         #endregion
 
