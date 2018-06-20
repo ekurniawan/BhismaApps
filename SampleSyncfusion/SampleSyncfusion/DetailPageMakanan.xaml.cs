@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SampleSyncfusion.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,14 @@ namespace SampleSyncfusion
             Global.Instance.myData.WaktuSelesai = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
             Global.Instance.myData.Interval = Global.Instance.myData.WaktuSelesai -
                 Global.Instance.myData.WaktuMulai;
+
+            //menambahkan data kedalam database sqlite
+            var newLogData = new LogData
+            {
+
+            };
+
+            App.DBUtils.InsertLogData(newLogData);
 
             string data = Global.Instance.myData.Interval.ToString() + " " + Global.Instance.myBio.Nama + " " +
                 Global.Instance.myData.KodeJenisSoal + " "+Global.Instance.myData.HistoriJawaban;

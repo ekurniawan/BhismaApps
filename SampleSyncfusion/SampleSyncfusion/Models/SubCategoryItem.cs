@@ -12,6 +12,7 @@ namespace SampleSyncfusion.Models
         public string CategoryName { get; set; }
         public string CategoryDescription { get; set; }
         public int Harga { get; set; }
+        public string Alamat { get; set; }
         public List<SubCategoryItem> SubCategoryItems { get; set; }
     }
 }

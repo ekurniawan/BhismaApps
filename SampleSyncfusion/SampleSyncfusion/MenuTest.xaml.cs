@@ -31,8 +31,8 @@ namespace SampleSyncfusion
         private async void Btn_Clicked(object sender, EventArgs e)
         {
             Global.Instance.myData.WaktuMulai = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
-          
-            
+            Global.Instance.myData.TanggalPercobaan = DateTime.Now;
+
             Button btn = sender as Button;
             if(btn.Text == "List Makanan")
             {
