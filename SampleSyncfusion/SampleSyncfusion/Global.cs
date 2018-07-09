@@ -10,7 +10,6 @@ namespace SampleSyncfusion
         public Global()
         {
             myData = new LogData();
-            myBio = new Biodata();
         }
 
         private static Global _instance;
@@ -26,6 +25,5 @@ namespace SampleSyncfusion
             }
         }
         public LogData myData { get; set; }
-        public Biodata myBio { get; set; }
     }
 }

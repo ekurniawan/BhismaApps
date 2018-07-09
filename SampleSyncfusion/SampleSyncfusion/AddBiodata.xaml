@@ -11,8 +11,15 @@
             </StackLayout>
             <StackLayout>
                 <Entry x:Name="txtNama" Placeholder="masukan nama" />
-                <Entry x:Name="txtUsia" Placeholder="masukan usia" />
-                <Entry x:Name="txtGender" Placeholder="masukan gender" />
+                <Entry x:Name="txtUsia" Placeholder="masukan usia" Keyboard="Numeric" />
+                <Picker x:Name="pickerGender" Title="pilih gender" SelectedIndexChanged="pickerGender_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Pria</x:String>
+                            <x:String>Wanita</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="btnDaftar" Text="Daftarkan" />
                 </StackLayout>

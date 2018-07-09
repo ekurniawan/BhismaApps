@@ -39,8 +39,8 @@ namespace SampleSyncfusion
                 //Global.Instance.myBio.Gender = txtGender.Text;
 
                 Global.Instance.myData.Nama = txtNama.Text;
-                Global.Instance.myData.Gender = txtGender.Text;
                 Global.Instance.myData.Usia = Convert.ToInt32(txtUsia.Text);
+                Global.Instance.myData.TanggalPercobaan = DateTime.Now;
 
                 //menambahkan biodata kedalam sqlite
                 //App.DBUtils.InsertBiodata(newBiodata);
@@ -62,6 +62,18 @@ namespace SampleSyncfusion
                 await DisplayAlert("Error", "Ditemukan kesalahan " + ex.Message, "OK");
             }
            
+        }
+
+        private void pickerGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+
+            if (selectedIndex != -1)
+            {
+                Global.Instance.myData.Gender = (string)picker.ItemsSource[selectedIndex];
+                //DisplayAlert("Keterangan", Global.Instance.myData.Gender,"OK");
+            }
         }
     }
 }

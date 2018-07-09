@@ -34,7 +34,11 @@ namespace SampleSyncfusion
             Global.Instance.myData.TanggalPercobaan = DateTime.Now;
 
             Button btn = sender as Button;
-            if(btn.Text == "List Makanan")
+            if(btn.Text== "Masukan Biodata")
+            {
+                await Navigation.PushAsync(new AddBiodata());
+            }
+            else if (btn.Text == "List Makanan")
             {
                 Global.Instance.myData.KodeJenisSoal = "M1";
                 await Navigation.PushAsync(new ListViewMakanan());

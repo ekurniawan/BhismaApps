@@ -31,9 +31,9 @@ namespace SampleSyncfusion
 
             };
 
-            App.DBUtils.InsertLogData(newLogData);
+            //App.DBUtils.InsertLogData(newLogData);
 
-            string data = Global.Instance.myData.Interval.ToString() + " " + Global.Instance.myBio.Nama + " " +
+            string data = Global.Instance.myData.Interval.ToString() + " " + Global.Instance.myData.Nama + " " +
                 Global.Instance.myData.KodeJenisSoal + " "+Global.Instance.myData.HistoriJawaban;
 
             await DisplayAlert("Keterangan", "Selamat proses transaksi berhasil - "+data, "OK");
